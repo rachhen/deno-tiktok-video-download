@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "dom.extras", "deno.ns"]
+  },
+  "tasks": {
+    "dev": "deno run -A src/main.ts"
+  }
+}
