@@ -22,7 +22,7 @@ if (flags.link || flags.l) {
     );
   }
 } else if (flags.vid) {
-  const video = await tiktok.fromVideoId(flags.vid);
+  const video = await tiktok.fromVideoId(flags.vid, flags.wm);
 
   if (video) {
     console.log(

@@ -59,9 +59,15 @@ export class Tiktok {
     return null;
   }
 
-  async fromVideoId(videoId: string) {
+  async fromVideoId(videoId: string, wm = false) {
     const data = await this.fetchVideoInfo(videoId);
-    const videoUrl = data.aweme_list[0].video.download_addr.url_list[0];
+
+    let videoUrl;
+    if (wm) {
+      videoUrl = data.aweme_list[0].video.download_addr.url_list[0];
+    } else {
+      videoUrl = data.aweme_list[0].video.play_addr.url_list[0];
+    }
 
     return this.downloadVideo({ videoId, videoUrl });
   }
