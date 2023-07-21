@@ -44,6 +44,6 @@ if (flags.link || flags.l) {
 
   --wm                Use this when you want to download video with watermark. 
                       You can combine with -f or --link
-  -d|--dest [path]    If you want to customize destination store video use this option.
+  -d|--dest [path]    If you want to customize destination store video use this option. default: ${dest}
   `);
 }
